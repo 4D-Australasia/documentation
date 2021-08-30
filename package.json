@@ -9,7 +9,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "crawl": "docker run --env-file=.env -e 'CONFIG=$(cat ./config.json | jq -r tostring)' algolia/docsearch-scraper"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.0",
